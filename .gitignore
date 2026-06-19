@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+.pytest_cache/
+
+# Node / Next.js
+node_modules/
+.next/
+out/
+dist/
+*.log
+
+# Env & secrets
+.env
+.env.local
+
+# Data / artifacts
+arena.db
+arena.db-wal
+arena.db-shm
+backend/policies.pdf
+backend/policies/*.pdf
+backend/policies/*.PDF
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editor
+.vscode/
+.idea/

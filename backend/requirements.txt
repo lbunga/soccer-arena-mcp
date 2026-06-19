@@ -1,0 +1,24 @@
+# Core
+python-dotenv>=1.0.0
+pydantic>=2.6.0
+
+# MCP server
+mcp>=1.2.0
+
+# FastAPI layer
+fastapi>=0.110.0
+uvicorn[standard]>=0.27.0
+
+# Email / calendar
+icalendar>=5.0.11
+
+# RAG
+llama-index>=0.10.40
+llama-index-embeddings-openai>=0.1.10
+llama-index-vector-stores-pinecone>=0.1.7
+llama-index-readers-file>=0.1.20
+pinecone-client>=4.1.0
+pypdf>=4.2.0
+
+# Tests
+pytest>=8.0.0

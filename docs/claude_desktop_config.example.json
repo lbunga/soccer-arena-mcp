@@ -1,0 +1,9 @@
+{
+  "mcpServers": {
+    "virtualsoccerarena": {
+      "command": "C:\\absolute\\path\\to\\backend\\.venv\\Scripts\\python.exe",
+      "args": ["-m", "mcp_server.server"],
+      "cwd": "C:\\absolute\\path\\to\\backend"
+    }
+  }
+}
