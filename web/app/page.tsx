@@ -62,13 +62,13 @@ export default function HomePage() {
     }
   }
 
-  // Parse active date to render the calendar grid
-  const parsedDate = new Date(date);
-  const year = isNaN(parsedDate.getTime()) ? 2026 : parsedDate.getFullYear();
-  const month = isNaN(parsedDate.getTime()) ? 6 : parsedDate.getMonth(); // 0-indexed
-  const activeDayNum = isNaN(parsedDate.getTime()) ? 24 : parsedDate.getDate();
+  // Parse active date parts to avoid local/UTC timezone conversion shifting
+  const dateParts = date ? date.split("-") : [];
+  const year = dateParts[0] ? parseInt(dateParts[0], 10) : 2026;
+  const month = dateParts[1] ? (parseInt(dateParts[1], 10) - 1) : 6; // 0-indexed (6 = July)
+  const activeDayNum = dateParts[2] ? parseInt(dateParts[2], 10) : 24;
 
-  const monthName = parsedDate.toLocaleString("en-US", { month: "long" });
+  const monthName = new Date(year, month, 1).toLocaleString("en-US", { month: "long" });
 
   // Compute calendar days
   const daysInMonth = new Date(year, month + 1, 0).getDate();
